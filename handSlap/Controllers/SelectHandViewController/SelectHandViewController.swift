@@ -12,7 +12,7 @@ class SelectHandViewController: GeneralViewController {
     var topPlayerReady = false
     var bottomPlayerReady = false
     var listHand = [Hand]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.topCollection.delegate = self
@@ -52,6 +52,11 @@ class SelectHandViewController: GeneralViewController {
                 goToGame()
             }
         }
+    }
+    
+    ///
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     //
