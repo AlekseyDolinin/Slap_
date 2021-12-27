@@ -1,0 +1,116 @@
+import UIKit
+
+class SelectHandViewController: GeneralViewController {
+    
+    var viewSelf: SelectHandView! {
+        guard isViewLoaded else {return nil}
+        return (view as! SelectHandView)
+    }
+    
+    var selectIndexHandTop = 0
+    var selectIndexHandBottom = 0
+    var topPlayerReady = false
+    var bottomPlayerReady = false
+    var listHand = [Hand]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewSelf.topCollection.delegate = self
+        viewSelf.topCollection.dataSource = self
+        viewSelf.bottomCollection.delegate = self
+        viewSelf.bottomCollection.dataSource = self
+        for i in 0..<10 {
+            listHand.append(Hand(id: i, name: "hand_0"))
+            viewSelf.listHand = self.listHand
+        }
+    }
+    
+    func goToGame() {
+        viewSelf.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
+            vc.topHand = self.listHand[self.selectIndexHandTop]
+            vc.bottomHand = self.listHand[self.selectIndexHandBottom]
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
+    func showModalFullVersion() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FullVersionViewController") as! FullVersionViewController
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
+    }
+    
+    //
+    @IBAction func topPlayerReady(_ sender: UIButton) {
+        if selectIndexHandTop > 2 {
+            showModalFullVersion()
+        } else {
+            topPlayerReady = true
+            viewSelf.iconTopReady.isHidden = false
+            if topPlayerReady == true && bottomPlayerReady == true {
+                goToGame()
+            }
+        }
+    }
+    
+    //
+    @IBAction func bottomPlayerReady(_ sender: UIButton) {
+        if selectIndexHandBottom > 2 {
+            showModalFullVersion()
+        } else {
+            bottomPlayerReady = true
+            viewSelf.iconBottomReady.isHidden = false
+            if topPlayerReady == true && bottomPlayerReady == true {
+                goToGame()
+            }
+        }
+    }
+    
+    //
+    @IBAction func scrollTopHand(_ sender: UIButton) {
+        if sender.restorationIdentifier == "PreviousHandTop" {
+            selectIndexHandTop = selectIndexHandTop - 1
+            if !(0..<listHand.count).contains(selectIndexHandTop) {
+                print("out")
+                selectIndexHandTop += 1
+            }
+        }
+        if sender.restorationIdentifier == "NextHandTop" {
+            selectIndexHandTop = selectIndexHandTop + 1
+            if !(0..<listHand.count).contains(selectIndexHandTop) {
+                print("out")
+                selectIndexHandTop -= 1
+            }
+        }
+        viewSelf.topCollection.scrollToItem(at: IndexPath(row: selectIndexHandTop, section: 0),
+                                      at: .centeredHorizontally, animated: true)
+        // показ и скрытие переключателей рук
+        // при крайних положениях скрываются кнопки далее
+        viewSelf.checkButton(indexHandTop: selectIndexHandTop, indexHandBottom: selectIndexHandBottom)
+    }
+    
+    //
+    @IBAction func scrollBottomHand(_ sender: UIButton) {
+        if sender.restorationIdentifier == "PreviousHandBottom" {
+            selectIndexHandBottom = selectIndexHandBottom - 1
+            if !(0..<listHand.count).contains(selectIndexHandBottom) {
+                print("out")
+                selectIndexHandBottom += 1
+            }
+        }
+        
+        if sender.restorationIdentifier == "NextHandBottom" {
+            selectIndexHandBottom = selectIndexHandBottom + 1
+            if !(0..<listHand.count).contains(selectIndexHandBottom) {
+                print("out")
+                selectIndexHandBottom -= 1
+            }
+        }
+        viewSelf.bottomCollection.scrollToItem(at: IndexPath(row: selectIndexHandBottom, section: 0),
+                                      at: .centeredHorizontally, animated: true)
+        // показ и скрытие переключателей рук
+        // при крайних положениях скрываются кнопки далее
+        viewSelf.checkButton(indexHandTop: selectIndexHandTop, indexHandBottom: selectIndexHandBottom)
+    }
+}
