@@ -14,15 +14,15 @@ class MenuAppViewController: GeneralViewController {
         print("VIBRATION")
     }
     
-    @IBAction func restartRound(_ sender: Any) {
+    @IBAction func getFullVersion(_ sender: Any) {
  
     }
 
-    @IBAction func home(_ sender: Any) {
+    @IBAction func restorePurshase(_ sender: Any) {
 
     }
     
-    @IBAction func backToGame(_ sender: Any) {
+    @IBAction func back(_ sender: Any) {
         dismiss(animated: false)
     }
 }

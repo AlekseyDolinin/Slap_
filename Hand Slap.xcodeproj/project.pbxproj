@@ -186,6 +186,7 @@
 				915222772763965100A623F4 /* Views */,
 				913FFF182774848F00C88CAF /* Controllers */,
 				919BED6C2776179F0030612A /* Managers */,
+				919BED77277A0FA30030612A /* Utils */,
 				913FFF1227746F4100C88CAF /* Resourses */,
 			);
 			name = slap;
@@ -199,6 +200,13 @@
 				919BED6E277617B20030612A /* StoreManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		919BED77277A0FA30030612A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		91A379C12770570500018F20 /* Cells */ = {
