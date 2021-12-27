@@ -30,6 +30,7 @@
 		919BED6B277604A50030612A /* FullVersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED6A277604A50030612A /* FullVersionViewController.swift */; };
 		919BED6F277617B50030612A /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED6D277617B20030612A /* PriceManager.swift */; };
 		919BED70277617B70030612A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED6E277617B20030612A /* StoreManager.swift */; };
+		919BED72277A0C3F0030612A /* MenuAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED71277A0C3F0030612A /* MenuAppViewController.swift */; };
 		91A379C02770570200018F20 /* HandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A379BF2770570200018F20 /* HandCell.swift */; };
 		91A379C3277068AC00018F20 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A379C2277068AC00018F20 /* Hand.swift */; };
 		91C7EAD22774B43C00343C7C /* StartBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7EAD12774B43C00343C7C /* StartBannerGoogleAds.swift */; };
@@ -63,6 +64,7 @@
 		919BED6A277604A50030612A /* FullVersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullVersionViewController.swift; sourceTree = "<group>"; };
 		919BED6D277617B20030612A /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 		919BED6E277617B20030612A /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		919BED71277A0C3F0030612A /* MenuAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppViewController.swift; sourceTree = "<group>"; };
 		91A379BF2770570200018F20 /* HandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCell.swift; sourceTree = "<group>"; };
 		91A379C2277068AC00018F20 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		91C7EAD12774B43C00343C7C /* StartBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBannerGoogleAds.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				916FCD04275658F0002CD0F5 /* GameViewController.swift */,
 				9103C4D0276A2A1D00921E81 /* FinalViewController.swift */,
 				919BED682775EE570030612A /* MenuGameViewController.swift */,
+				919BED71277A0C3F0030612A /* MenuAppViewController.swift */,
 				919BED6A277604A50030612A /* FullVersionViewController.swift */,
 			);
 			path = Controllers;
@@ -354,6 +357,7 @@
 				91A379C3277068AC00018F20 /* Hand.swift in Sources */,
 				919BED692775EE570030612A /* MenuGameViewController.swift in Sources */,
 				916FCD142756599A002CD0F5 /* StartViewController.swift in Sources */,
+				919BED72277A0C3F0030612A /* MenuAppViewController.swift in Sources */,
 				91155A07276208CB0038D904 /* GameScenePhysics.swift in Sources */,
 				9103C4DA276A3B9800921E81 /* SelectHandsDelegation.swift in Sources */,
 				9103C4D7276A397300921E81 /* SelectHandView.swift in Sources */,

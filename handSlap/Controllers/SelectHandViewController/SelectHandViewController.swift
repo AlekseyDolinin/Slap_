@@ -9,10 +9,11 @@ class SelectHandViewController: GeneralViewController {
     
     var selectIndexHandTop = 0
     var selectIndexHandBottom = 0
-    var topPlayerReady = false
-    var bottomPlayerReady = false
+    var topPlayerReadyBool = false
+    var bottomPlayerReadyBool = false
     var listHand = [Hand]()
 
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.topCollection.delegate = self
@@ -23,8 +24,16 @@ class SelectHandViewController: GeneralViewController {
             listHand.append(Hand(id: i, name: "hand_0"))
             viewSelf.listHand = self.listHand
         }
+        ///
+        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
+            print("nTransactionComplate")
+            self.dismiss(animated: true) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
+    //
     func goToGame() {
         viewSelf.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -35,41 +44,53 @@ class SelectHandViewController: GeneralViewController {
         }
     }
     
+    //
     func showModalFullVersion() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "FullVersionViewController") as! FullVersionViewController
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: false)
     }
     
+    
     //
-    @IBAction func topPlayerReady(_ sender: UIButton) {
-        if selectIndexHandTop > 2 {
-            showModalFullVersion()
-        } else {
-            topPlayerReady = true
+    func topPlayerReady() {
+        if StoreManager.isFullVersion() == false && selectIndexHandTop > 2 {
+            showModalFullVersion() // показ модалки о покупке
+        } else { // select hand
+            topPlayerReadyBool = true
             viewSelf.iconTopReady.isHidden = false
-            if topPlayerReady == true && bottomPlayerReady == true {
+            if topPlayerReadyBool == true && bottomPlayerReadyBool == true {
                 goToGame()
             }
         }
+    }
+    
+    //
+    func bottomPlayerReady() {
+        if StoreManager.isFullVersion() == false  && selectIndexHandBottom > 2 {
+            showModalFullVersion() // показ модалки о покупке
+        } else { // select hand
+            bottomPlayerReadyBool = true
+            viewSelf.iconBottomReady.isHidden = false
+            if topPlayerReadyBool == true && bottomPlayerReadyBool == true {
+                goToGame()
+            }
+        }
+    }
+    
+    //
+    @IBAction func topPlayerReadyAction() {
+        topPlayerReady()
+    }
+        
+    //
+    @IBAction func bottomPlayerReadyAction() {
+        bottomPlayerReady()
     }
     
     ///
     @IBAction func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-    }
-    
-    //
-    @IBAction func bottomPlayerReady(_ sender: UIButton) {
-        if selectIndexHandBottom > 2 {
-            showModalFullVersion()
-        } else {
-            bottomPlayerReady = true
-            viewSelf.iconBottomReady.isHidden = false
-            if topPlayerReady == true && bottomPlayerReady == true {
-                goToGame()
-            }
-        }
     }
     
     //

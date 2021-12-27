@@ -18,26 +18,11 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
     //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.restorationIdentifier == "topCollection" {
-            if selectIndexHandTop > 2 {
-                showModalFullVersion()
-            } else {
-                topPlayerReady = true
-                viewSelf.iconTopReady.isHidden = false
-                if topPlayerReady == true && bottomPlayerReady == true {
-                    goToGame()
-                }
-            }
+            topPlayerReady()
         }
+        //
         if collectionView.restorationIdentifier == "bottomCollection" {
-            if selectIndexHandBottom > 2 {
-                showModalFullVersion()
-            } else {
-                bottomPlayerReady = true
-                viewSelf.iconBottomReady.isHidden = false
-                if topPlayerReady == true && bottomPlayerReady == true {
-                    self.goToGame()
-                }
-            }
+            bottomPlayerReady()
         }
     }
     
@@ -48,12 +33,11 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.restorationIdentifier == "topCollection" {
-            topPlayerReady = false
+            topPlayerReadyBool = false
             viewSelf.iconTopReady.isHidden = true
         }
-
         if scrollView.restorationIdentifier == "bottomCollection" {
-            bottomPlayerReady = false
+            bottomPlayerReadyBool = false
             viewSelf.iconBottomReady.isHidden = true
         }
     }

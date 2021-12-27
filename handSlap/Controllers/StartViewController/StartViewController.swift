@@ -25,4 +25,11 @@ class StartViewController: GeneralViewController, GADBannerViewDelegate {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectHandViewController") as! SelectHandViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    //
+    @IBAction func showMenu(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuAppViewController") as! MenuAppViewController
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
+    }
 }

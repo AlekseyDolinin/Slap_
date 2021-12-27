@@ -13,6 +13,9 @@ class HandCell: UICollectionViewCell {
     
     func setCell() {
         handImage.image = UIImage(named: "\(hand.name)")
+        
+        
+        
     }
 }
 

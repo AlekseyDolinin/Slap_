@@ -52,6 +52,12 @@ class SelectHandView: UIView {
     
     //
     func setLockIconToHand() {
+        if StoreManager.isFullVersion() {
+            iconTopReady.image = UIImage(named: "checkIcon")
+            iconBottomReady.image = UIImage(named: "checkIcon")
+            return
+        }
+        
         if selectIndexHandTop > 2 {
             iconTopReady.isHidden = false
         }
@@ -65,12 +71,16 @@ class SelectHandView: UIView {
     
     //
     func setTitle() {
+        if StoreManager.isFullVersion() {
+            topSelectButton.setTitle("Ready", for: .normal)
+            bottomSelectButton.setTitle("Ready", for: .normal)
+            return
+        }
         let topTitle = selectIndexHandTop < 3 ? "Ready" : "Unlock"
         topSelectButton.setTitle(topTitle, for: .normal)
         let bottomTitle = selectIndexHandBottom < 3 ? "Ready" : "Unlock"
         bottomSelectButton.setTitle(bottomTitle, for: .normal)
     }
-    
 }
 
 extension SelectHandView {

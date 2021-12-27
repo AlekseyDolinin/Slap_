@@ -2,6 +2,7 @@ import UIKit
 import StoreKit
 
 let nTransactionComplate: NSNotification.Name = NSNotification.Name(rawValue: "nTransactionComplate")
+let nTransactionFailed: NSNotification.Name = NSNotification.Name(rawValue: "nTransactionFailed")
 let handSlapFullVersionID = "handSlapFullVersionID"
 
 class StoreManager: NSObject {

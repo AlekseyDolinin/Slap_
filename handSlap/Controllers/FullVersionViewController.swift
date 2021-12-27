@@ -12,7 +12,10 @@ class FullVersionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ///
+        NotificationCenter.default.addObserver(forName: nTransactionFailed, object: nil, queue: nil) { notification in
+            self.viewSelf.hideLoader()
+        }
     }
     
     
@@ -24,18 +27,14 @@ class FullVersionViewController: UIViewController {
     
     @IBAction func getFullVersion(_ sender: Any) {
         viewSelf.showLoader()
-        
-        if !StoreManager.isFullVersion() {
+        if StoreManager.isFullVersion() == false {
             getFullVersion()
         }
-        
     }
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: false)
     }
-    
-
 }
 
 
@@ -45,8 +44,8 @@ import UIKit
 
 class FullVersionView: UIView {
     
-
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var contentView: UIView!
     
     override func awakeFromNib() {
         setUI()
@@ -54,18 +53,24 @@ class FullVersionView: UIView {
     
     
     func configure() {
+        
     }
     
     ///
     func showLoader() {
-//        menuTable.alpha = 0.3
+        contentView.alpha = 0.3
         loader.startAnimating()
         isUserInteractionEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//            self.menuTable.alpha = 1.0
-            self.loader.stopAnimating()
-            self.isUserInteractionEnabled = true
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            self.hideLoader()
+//        }
+    }
+    
+    ///
+    func hideLoader() {
+        contentView.alpha = 1.0
+        loader.stopAnimating()
+        isUserInteractionEnabled = true
     }
 }
 
