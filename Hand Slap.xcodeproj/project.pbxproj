@@ -31,6 +31,12 @@
 		919BED6F277617B50030612A /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED6D277617B20030612A /* PriceManager.swift */; };
 		919BED70277617B70030612A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED6E277617B20030612A /* StoreManager.swift */; };
 		919BED72277A0C3F0030612A /* MenuAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED71277A0C3F0030612A /* MenuAppViewController.swift */; };
+		919BED7B277B279F0030612A /* SettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED7A277B279F0030612A /* SettingApp.swift */; };
+		919BED85277B2A0F0030612A /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED84277B2A0F0030612A /* Sound.swift */; };
+		919BED89277B2E530030612A /* wet_towel_on_body-13.flac in Resources */ = {isa = PBXBuildFile; fileRef = 919BED88277B2E530030612A /* wet_towel_on_body-13.flac */; };
+		919BED8B277B2E5B0030612A /* wet_towel_on_body-14.flac in Resources */ = {isa = PBXBuildFile; fileRef = 919BED8A277B2E5B0030612A /* wet_towel_on_body-14.flac */; };
+		919BED8D277B2E6A0030612A /* wet_towel_on_body-17.flac in Resources */ = {isa = PBXBuildFile; fileRef = 919BED8C277B2E6A0030612A /* wet_towel_on_body-17.flac */; };
+		919BED8F277B2E720030612A /* wet_towel_on_body-18.flac in Resources */ = {isa = PBXBuildFile; fileRef = 919BED8E277B2E720030612A /* wet_towel_on_body-18.flac */; };
 		91A379C02770570200018F20 /* HandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A379BF2770570200018F20 /* HandCell.swift */; };
 		91A379C3277068AC00018F20 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A379C2277068AC00018F20 /* Hand.swift */; };
 		91C7EAD22774B43C00343C7C /* StartBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7EAD12774B43C00343C7C /* StartBannerGoogleAds.swift */; };
@@ -65,6 +71,12 @@
 		919BED6D277617B20030612A /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 		919BED6E277617B20030612A /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		919BED71277A0C3F0030612A /* MenuAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppViewController.swift; sourceTree = "<group>"; };
+		919BED7A277B279F0030612A /* SettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingApp.swift; sourceTree = "<group>"; };
+		919BED84277B2A0F0030612A /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		919BED88277B2E530030612A /* wet_towel_on_body-13.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wet_towel_on_body-13.flac"; sourceTree = "<group>"; };
+		919BED8A277B2E5B0030612A /* wet_towel_on_body-14.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wet_towel_on_body-14.flac"; sourceTree = "<group>"; };
+		919BED8C277B2E6A0030612A /* wet_towel_on_body-17.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wet_towel_on_body-17.flac"; sourceTree = "<group>"; };
+		919BED8E277B2E720030612A /* wet_towel_on_body-18.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wet_towel_on_body-18.flac"; sourceTree = "<group>"; };
 		91A379BF2770570200018F20 /* HandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCell.swift; sourceTree = "<group>"; };
 		91A379C2277068AC00018F20 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		91C7EAD12774B43C00343C7C /* StartBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBannerGoogleAds.swift; sourceTree = "<group>"; };
@@ -116,6 +128,10 @@
 		913FFF1227746F4100C88CAF /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				919BED88277B2E530030612A /* wet_towel_on_body-13.flac */,
+				919BED8A277B2E5B0030612A /* wet_towel_on_body-14.flac */,
+				919BED8C277B2E6A0030612A /* wet_towel_on_body-17.flac */,
+				919BED8E277B2E720030612A /* wet_towel_on_body-18.flac */,
 				916FCD09275658F1002CD0F5 /* Assets.xcassets */,
 				913FFF1327746F5500C88CAF /* Fonts */,
 			);
@@ -205,6 +221,8 @@
 		919BED77277A0FA30030612A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				919BED7A277B279F0030612A /* SettingApp.swift */,
+				919BED84277B2A0F0030612A /* Sound.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,7 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				913FFF1527746FB100C88CAF /* rozo-Regular.ttf in Resources */,
+				919BED89277B2E530030612A /* wet_towel_on_body-13.flac in Resources */,
+				919BED8B277B2E5B0030612A /* wet_towel_on_body-14.flac in Resources */,
+				919BED8D277B2E6A0030612A /* wet_towel_on_body-17.flac in Resources */,
 				913FFF1B27748B8000C88CAF /* Assets.xcassets in Resources */,
+				919BED8F277B2E720030612A /* wet_towel_on_body-18.flac in Resources */,
 				916FCD08275658F0002CD0F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +392,8 @@
 				9103C4DA276A3B9800921E81 /* SelectHandsDelegation.swift in Sources */,
 				9103C4D7276A397300921E81 /* SelectHandView.swift in Sources */,
 				919BED6B277604A50030612A /* FullVersionViewController.swift in Sources */,
+				919BED7B277B279F0030612A /* SettingApp.swift in Sources */,
+				919BED85277B2A0F0030612A /* Sound.swift in Sources */,
 				91A379C02770570200018F20 /* HandCell.swift in Sources */,
 				91C7EAD22774B43C00343C7C /* StartBannerGoogleAds.swift in Sources */,
 				9103C4D1276A2A1D00921E81 /* FinalViewController.swift in Sources */,

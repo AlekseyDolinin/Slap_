@@ -11,13 +11,10 @@ class FullVersionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ///
         NotificationCenter.default.addObserver(forName: nTransactionFailed, object: nil, queue: nil) { notification in
             self.viewSelf.hideLoader()
         }
     }
-    
     
     ///
     func getFullVersion() {
@@ -25,6 +22,7 @@ class FullVersionViewController: UIViewController {
         storeManager.buyInApp(inAppID: handSlapFullVersionID)
     }
     
+    //
     @IBAction func getFullVersion(_ sender: Any) {
         viewSelf.showLoader()
         if StoreManager.isFullVersion() == false {
@@ -32,6 +30,12 @@ class FullVersionViewController: UIViewController {
         }
     }
     
+    //
+    @IBAction func restorePurshase(_ sender: Any) {
+        print("restorePurshase")
+    }
+    
+    //
     @IBAction func back(_ sender: Any) {
         dismiss(animated: false)
     }
@@ -61,9 +65,6 @@ class FullVersionView: UIView {
         contentView.alpha = 0.3
         loader.startAnimating()
         isUserInteractionEnabled = false
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-//            self.hideLoader()
-//        }
     }
     
     ///

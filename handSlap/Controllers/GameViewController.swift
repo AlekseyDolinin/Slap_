@@ -38,7 +38,18 @@ class GameViewController: GeneralViewController {
         NotificationCenter.default.addObserver(forName: nBackHome, object: nil, queue: nil) { notification in
             self.outGame()
         }
+        
+        if SettingApp.isSoundOn() {
+            Sound.setSlapEffect()
+        }
+        
     }
+    
+    deinit {
+        print("deinit GameViewController")
+        Sound.removePlayers()
+    }
+    
     
     //
     func createGame() {
@@ -67,8 +78,14 @@ class GameViewController: GeneralViewController {
         }
     }
     
+    //
     func shake() {
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        if SettingApp.isSoundOn() {
+            Sound.playerSlapEffect?.play()
+        }
+        if SettingApp.isVibrationOn() {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.03
         animation.repeatCount = 3
@@ -78,7 +95,7 @@ class GameViewController: GeneralViewController {
         view.layer.add(animation, forKey: "position")
     }
     
-    
+    //
     func updateFalseStartCount() {
         game.falseStartCount += 1
         viewSelf.game = game

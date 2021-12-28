@@ -28,10 +28,27 @@ class SelectHandViewController: GeneralViewController {
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
             print("nTransactionComplate")
             self.dismiss(animated: true) {
-                self.navigationController?.popViewController(animated: true)
+//                self.navigationController?.popViewController(animated: true)
+                self.reloadAfterTransactionComplate()
             }
         }
+        
+        print("is full version: \(StoreManager.isFullVersion())")
     }
+    
+    func reloadAfterTransactionComplate() {
+        viewSelf.topCollection.scrollToItem(at: IndexPath(row: 0, section: 0), at: .right, animated: true)
+        viewSelf.bottomCollection.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
+        viewSelf.topSelectButton.setTitle("Ready", for: .normal)
+        viewSelf.bottomSelectButton.setTitle("Ready", for: .normal)
+        selectIndexHandTop = 0
+        selectIndexHandBottom = 0
+        topPlayerReadyBool = false
+        bottomPlayerReadyBool = false
+        viewSelf.topCollection.reloadData()
+        viewSelf.bottomCollection.reloadData()
+    }
+    
     
     //
     func goToGame() {
@@ -50,7 +67,6 @@ class SelectHandViewController: GeneralViewController {
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: false)
     }
-    
     
     //
     func topPlayerReady() {
