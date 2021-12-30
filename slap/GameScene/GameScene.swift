@@ -83,6 +83,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         topHand.position = CGPoint(x: size.width / 2, y: size.height * 1.5)
         topHand.size = CGSize(width: size.width * 0.4, height: size.height * 0.8)
         topHand.yScale = -1
+        topHand.xScale = -1
         topHand.zPosition = 0
         topHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 40, center: CGPoint(x: 0, y: 0) )
         topHand.physicsBody?.isDynamic = true

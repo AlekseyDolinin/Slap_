@@ -51,11 +51,9 @@ class GameView: UIView {
     }
 
     func setConstraint() {
-        if #available(iOS 13.0, *) {
-            let window = UIApplication.shared.windows.first
-            let topPadding = window?.safeAreaInsets.top ?? 0.0
-            topConstaraint.constant += topPadding / 2
-        }
+        let window = UIApplication.shared.windows.first
+        let topPadding = window?.safeAreaInsets.top ?? 0.0
+        topConstaraint.constant += topPadding / 1.4
     }
     
     //

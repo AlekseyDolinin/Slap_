@@ -39,8 +39,8 @@ class SelectHandViewController: GeneralViewController {
     func reloadAfterTransactionComplate() {
         viewSelf.topCollection.scrollToItem(at: IndexPath(row: 0, section: 0), at: .right, animated: true)
         viewSelf.bottomCollection.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
-        viewSelf.topSelectButton.setTitle("Ready", for: .normal)
-        viewSelf.bottomSelectButton.setTitle("Ready", for: .normal)
+//        viewSelf.topSelectButton.setTitle("Ready", for: .normal)
+//        viewSelf.bottomSelectButton.setTitle("Ready", for: .normal)
         selectIndexHandTop = 0
         selectIndexHandBottom = 0
         topPlayerReadyBool = false
