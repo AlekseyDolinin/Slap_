@@ -24,8 +24,8 @@ class StartViewController: GeneralViewController {
     }
     
     //
-    @IBAction func showMenu(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuAppViewController") as! MenuAppViewController
+    @IBAction func fullVersionModal(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FullVersionViewController") as! FullVersionViewController
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: false)
     }

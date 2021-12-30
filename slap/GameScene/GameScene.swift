@@ -47,8 +47,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //
     func initVariables() {
-        topHand = SKSpriteNode(imageNamed: gameVC.topHand.name)
-        bottomHand = SKSpriteNode(imageNamed: gameVC.bottomHand.name)
+        topHand = SKSpriteNode(imageNamed: "hand_\(gameVC.topHandIndex)")
+        bottomHand = SKSpriteNode(imageNamed: "hand_\(gameVC.bottomHandIndex)")
         //
         slapTop = SKAction.move(by: CGVector(dx: 0, dy: -(size.height / 3)), duration: durationAttackHand)
         backSlapTop = SKAction.move(by: CGVector(dx: 0, dy: size.height / 3), duration: durationAttackHand)

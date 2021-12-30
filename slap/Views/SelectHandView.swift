@@ -13,7 +13,7 @@ class SelectHandView: UIView {
     
     var selectIndexHandTop = 0
     var selectIndexHandBottom = 0
-    var listHand = [Hand]()
+    var countHand: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,20 +22,18 @@ class SelectHandView: UIView {
     
     // показ и скрытие переключателей рук
     // при крайних положениях скрываются кнопки далее
-    func checkButton(indexHandTop: Int, indexHandBottom: Int) {
-        topCollectionPreviousButton.alpha = indexHandTop == 0 ? 0.2 : 1
-        topCollectionNextButton.alpha = indexHandTop == (listHand.count - 1) ? 0.2 : 1
-        bottomCollectionPreviousButton.alpha = indexHandBottom == 0 ? 0.2 : 1
-        bottomCollectionNextButton.alpha = indexHandBottom == (listHand.count - 1) ? 0.2 : 1
-    }
-    
-    //
-    func setContent() {
+    func checkButton() {
+        topCollectionPreviousButton.alpha = selectIndexHandTop == 0 ? 0.2 : 1
+        topCollectionNextButton.alpha = selectIndexHandTop == (countHand - 1) ? 0.2 : 1
+        bottomCollectionPreviousButton.alpha = selectIndexHandBottom == 0 ? 0.2 : 1
+        bottomCollectionNextButton.alpha = selectIndexHandBottom == (countHand - 1) ? 0.2 : 1
+        
         setLockIconToHand()
     }
     
     //
     func setLockIconToHand() {
+        
         if StoreManager.isFullVersion() {
             iconTopReady.image = UIImage(named: "checkIcon")
             iconBottomReady.image = UIImage(named: "checkIcon")
@@ -45,17 +43,18 @@ class SelectHandView: UIView {
         if selectIndexHandTop > 2 {
             iconTopReady.isHidden = false
         }
-        iconTopReady.image = UIImage(named: selectIndexHandTop < 3 ? "checkIcon" : "lockIcon")
         
         if selectIndexHandBottom > 2 {
             iconBottomReady.isHidden = false
         }
+        
+        iconTopReady.image = UIImage(named: selectIndexHandTop < 3 ? "checkIcon" : "lockIcon")
         iconBottomReady.image = UIImage(named: selectIndexHandBottom < 3 ? "checkIcon" : "lockIcon")
     }
 }
 
 extension SelectHandView {
-    ///
+    //
     func setUI() {
         topCollection.automaticallyAdjustsScrollIndicatorInsets = false
         bottomCollection.automaticallyAdjustsScrollIndicatorInsets = false

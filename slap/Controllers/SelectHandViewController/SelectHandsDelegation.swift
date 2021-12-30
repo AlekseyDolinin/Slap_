@@ -4,13 +4,13 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
     
     //
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listHand.count
+        return countHand
     }
     
     //
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let handCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HandCell", for: indexPath) as! HandCell
-        handCell.hand = listHand[indexPath.row]
+        handCell.handIndex = indexPath.row
         handCell.setCell()
         return handCell
     }
@@ -48,17 +48,14 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
         let visiblePointTop = CGPoint(x: visibleRectTop.midX, y: visibleRectTop.midY)
         let visibleIndexPathTop = viewSelf.topCollection.indexPathForItem(at: visiblePointTop)
         selectIndexHandTop = visibleIndexPathTop!.row
+        viewSelf.selectIndexHandTop = self.selectIndexHandTop
         
         let visibleRectBottom = CGRect(origin: viewSelf.bottomCollection.contentOffset, size: viewSelf.bottomCollection.bounds.size)
         let visiblePointBottom = CGPoint(x: visibleRectBottom.midX, y: visibleRectBottom.midY)
         let visibleIndexPathBottom = viewSelf.bottomCollection.indexPathForItem(at: visiblePointBottom)
         selectIndexHandBottom = visibleIndexPathBottom!.row
-        // показ и скрытие переключателей рук
-        // при крайних положениях скрываются кнопки далее
-        viewSelf.checkButton(indexHandTop: selectIndexHandTop, indexHandBottom: selectIndexHandBottom)
-        
-        viewSelf.selectIndexHandTop = self.selectIndexHandTop
         viewSelf.selectIndexHandBottom = self.selectIndexHandBottom
-        viewSelf.setContent()
+        
+        viewSelf.checkButton()
     }
 }

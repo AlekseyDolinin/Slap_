@@ -34,7 +34,6 @@
 		4D47E0F3277E0A7900DBE39E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0E2277E0A7800DBE39E /* StartView.swift */; };
 		4D47E0F4277E0A7900DBE39E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0E3277E0A7800DBE39E /* GameView.swift */; };
 		4D47E0F5277E0A7900DBE39E /* SelectHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0E4277E0A7800DBE39E /* SelectHandView.swift */; };
-		4D47E0F6277E0A7900DBE39E /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0E6277E0A7800DBE39E /* Hand.swift */; };
 		4D47E0F7277E0A7900DBE39E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0E7277E0A7800DBE39E /* Game.swift */; };
 		4D47E0F8277E0A7900DBE39E /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0EA277E0A7900DBE39E /* PriceManager.swift */; };
 		4D47E0F9277E0A7900DBE39E /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0EB277E0A7900DBE39E /* StoreManager.swift */; };
@@ -74,7 +73,6 @@
 		4D47E0E2277E0A7800DBE39E /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		4D47E0E3277E0A7800DBE39E /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		4D47E0E4277E0A7800DBE39E /* SelectHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectHandView.swift; sourceTree = "<group>"; };
-		4D47E0E6277E0A7800DBE39E /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		4D47E0E7277E0A7800DBE39E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		4D47E0EA277E0A7900DBE39E /* PriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 		4D47E0EB277E0A7900DBE39E /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 		4D47E0E5277E0A7800DBE39E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4D47E0E6277E0A7800DBE39E /* Hand.swift */,
 				4D47E0E7277E0A7800DBE39E /* Game.swift */,
 			);
 			path = Models;
@@ -375,7 +372,6 @@
 				4D47E0F3277E0A7900DBE39E /* StartView.swift in Sources */,
 				4D47E0FA277E0A7900DBE39E /* SettingApp.swift in Sources */,
 				4D47E0FB277E0A7900DBE39E /* Sound.swift in Sources */,
-				4D47E0F6277E0A7900DBE39E /* Hand.swift in Sources */,
 				4D47E0D7277E0A5D00DBE39E /* MenuGameViewController.swift in Sources */,
 				4D47E0D5277E0A5D00DBE39E /* FullVersionViewController.swift in Sources */,
 				4D46F72F277E010200DE0A00 /* AppDelegate.swift in Sources */,

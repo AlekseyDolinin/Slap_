@@ -3,19 +3,26 @@ import UIKit
 class StartView: UIView {
     
     @IBOutlet weak var startGameButton: UIButton!
+    @IBOutlet weak var fullVersionButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        startGameButton.transform = CGAffineTransform(translationX: 0, y: -frame.height)
         setUI()
     }
 }
 
 extension StartView {
-    ///
+    //
     func setUI() {
-        UIView.animate(withDuration: 1.0,
+        
+        startGameButton.transform = CGAffineTransform(translationX: 0, y: -frame.height)
+        
+        if StoreManager.isFullVersion() {
+            fullVersionButton.isHidden = true
+        }
+        
+        UIView.animate(withDuration: 0.8,
                        delay: 0.2,
                        usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 0.0,
@@ -24,7 +31,6 @@ extension StartView {
             self.startGameButton.transform = .identity
         }) { _ in
             print("")
-            
             print("_______________________________________")
             print("animation completed")
         }

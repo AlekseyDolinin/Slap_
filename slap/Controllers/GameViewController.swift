@@ -13,8 +13,8 @@ class GameViewController: GeneralViewController {
     
     var game: Game!
     var lockHand = false
-    var topHand: Hand!
-    var bottomHand: Hand!
+    var topHandIndex = 0
+    var bottomHandIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

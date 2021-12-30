@@ -561,14 +561,14 @@
             <objects>
                 <viewController storyboardIdentifier="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TpX-5H-Lka" customClass="StartViewController" customModule="slap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6oB-7a-3CR" customClass="StartView" customModule="slap" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="EHf-W0-Dgb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-4X-Ll5">
-                                <rect key="frame" x="120" y="361" width="174" height="174"/>
+                                <rect key="frame" x="120" y="266" width="135" height="135"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bcq-4X-Ll5" secondAttribute="height" multiplier="1:1" id="mga-w3-0gb"/>
@@ -576,28 +576,28 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="buttonPlay"/>
                                 <connections>
-                                    <action selector="goToSelectHand:" destination="TpX-5H-Lka" eventType="touchUpInside" id="Nfg-na-sgC"/>
+                                    <action selector="goToSelectHand:" destination="TpX-5H-Lka" eventType="touchUpInside" id="lDS-TY-E0V"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_2" translatesAutoresizingMaskIntoConstraints="NO" id="6QX-Be-VdN">
-                                <rect key="frame" x="32" y="40" width="350" height="116.5"/>
+                                <rect key="frame" x="32" y="40" width="311" height="103.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6QX-Be-VdN" secondAttribute="height" multiplier="3:1" id="KEu-ez-nJ0"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-hW-ajI">
-                                <rect key="frame" x="167" y="752" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txM-Kl-ZMH">
+                                <rect key="frame" x="37.5" y="513" width="300" height="90"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QNI-ER-RxA"/>
-                                    <constraint firstAttribute="width" constant="80" id="mTX-WP-C4s"/>
+                                    <constraint firstAttribute="width" constant="300" id="JqK-MI-1XT"/>
+                                    <constraint firstAttribute="height" constant="90" id="KwH-Oe-9Vz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="rozo-Regular" family="rozo" pointSize="60"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="36"/>
+                                <fontDescription key="fontDescription" name="rozo-Regular" family="rozo" pointSize="45"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="buttonMenu"/>
+                                <state key="normal" title="full version" backgroundImage="buttonEmpty_2"/>
                                 <connections>
-                                    <action selector="showMenu:" destination="TpX-5H-Lka" eventType="touchUpInside" id="iiS-BN-Zpn"/>
+                                    <action selector="fullVersionModal:" destination="TpX-5H-Lka" eventType="touchUpInside" id="i15-o6-1PX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -609,19 +609,19 @@
                             <constraint firstItem="6QX-Be-VdN" firstAttribute="top" secondItem="aQs-CT-X4S" secondAttribute="top" constant="40" id="M4O-vb-n2H"/>
                             <constraint firstAttribute="trailing" secondItem="bcq-4X-Ll5" secondAttribute="trailing" constant="120" id="Mnv-Ni-dVg"/>
                             <constraint firstItem="EHf-W0-Dgb" firstAttribute="top" secondItem="6oB-7a-3CR" secondAttribute="top" id="RpM-cT-BTn"/>
-                            <constraint firstItem="aQs-CT-X4S" firstAttribute="bottom" secondItem="ue4-hW-ajI" secondAttribute="bottom" constant="64" id="T98-cb-h92"/>
                             <constraint firstItem="6QX-Be-VdN" firstAttribute="leading" secondItem="6oB-7a-3CR" secondAttribute="leading" constant="32" id="YAB-F4-XTR"/>
                             <constraint firstItem="EHf-W0-Dgb" firstAttribute="leading" secondItem="aQs-CT-X4S" secondAttribute="leading" id="dNW-fb-ocb"/>
                             <constraint firstAttribute="bottom" secondItem="EHf-W0-Dgb" secondAttribute="bottom" id="liz-Gi-b6I"/>
                             <constraint firstItem="bcq-4X-Ll5" firstAttribute="centerY" secondItem="6oB-7a-3CR" secondAttribute="centerY" id="oRK-jv-odm"/>
-                            <constraint firstItem="ue4-hW-ajI" firstAttribute="centerX" secondItem="6oB-7a-3CR" secondAttribute="centerX" id="s9E-xA-Bw7"/>
+                            <constraint firstItem="aQs-CT-X4S" firstAttribute="bottom" secondItem="txM-Kl-ZMH" secondAttribute="bottom" constant="64" id="vnj-7v-IIK"/>
+                            <constraint firstItem="txM-Kl-ZMH" firstAttribute="centerX" secondItem="6oB-7a-3CR" secondAttribute="centerX" id="vwA-5G-qym"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aQs-CT-X4S"/>
                         <connections>
+                            <outlet property="fullVersionButton" destination="txM-Kl-ZMH" id="7bz-M6-1Ua"/>
                             <outlet property="startGameButton" destination="bcq-4X-Ll5" id="2Vn-hH-bMV"/>
                         </connections>
                     </view>
-                    <size key="freeformSize" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jg-ZA-wlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -832,7 +832,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-Ms-ZpK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239.19999999999999" y="105.69715142428787"/>
+            <point key="canvasLocation" x="-297" y="99"/>
         </scene>
         <!--Menu Game View Controller-->
         <scene sceneID="Arr-Oi-BnA">
@@ -967,7 +967,8 @@
                                                     <constraint firstAttribute="width" constant="300" id="Evb-Ii-NDB"/>
                                                     <constraint firstAttribute="height" constant="80" id="op8-JB-gDF"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="rozo-Regular" family="rozo" pointSize="37"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="get full version" backgroundImage="buttonEmpty_2"/>
                                                 <connections>
@@ -981,6 +982,8 @@
                                                     <constraint firstAttribute="height" constant="80" id="JE8-vE-ogg"/>
                                                     <constraint firstAttribute="width" constant="300" id="iuv-7h-Wuf"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="rozo-Regular" family="rozo" pointSize="37"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="restore purshase" backgroundImage="buttonEmpty_2"/>
                                                 <connections>
@@ -1020,109 +1023,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7C-9x-xqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239.13043478260872" y="-575.22321428571422"/>
-        </scene>
-        <!--Menu App View Controller-->
-        <scene sceneID="V3a-3f-IfP">
-            <objects>
-                <viewController storyboardIdentifier="MenuAppViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UBW-3Z-Mio" customClass="MenuAppViewController" customModule="slap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yux-Oe-BLz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-pS-Uxu">
-                                <rect key="frame" x="147.5" y="124" width="80" height="419"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-af-Azp">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="1rt-gq-ejy"/>
-                                            <constraint firstAttribute="width" secondItem="kqe-af-Azp" secondAttribute="height" multiplier="1:1" id="jFP-4r-zWE"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="buttonSoundOn"/>
-                                        <connections>
-                                            <action selector="sound:" destination="UBW-3Z-Mio" eventType="touchUpInside" id="RwP-Sa-rDT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTs-s9-gTt">
-                                        <rect key="frame" x="0.0" y="113" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="tTs-s9-gTt" secondAttribute="height" multiplier="1:1" id="4Sb-YS-hJf"/>
-                                            <constraint firstAttribute="height" constant="80" id="MyG-DY-af3"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="buttonVibrationOn"/>
-                                        <connections>
-                                            <action selector="vibration:" destination="UBW-3Z-Mio" eventType="touchUpInside" id="sub-cY-Jcx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIG-V4-uyV">
-                                        <rect key="frame" x="0.0" y="226" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="C4G-aK-egz"/>
-                                            <constraint firstAttribute="width" secondItem="MIG-V4-uyV" secondAttribute="height" multiplier="1:1" id="nRe-qv-Lhl"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="buttonReload"/>
-                                        <connections>
-                                            <action selector="getFullVersion:" destination="UBW-3Z-Mio" eventType="touchUpInside" id="fgt-P9-pg7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-sW-KJE">
-                                        <rect key="frame" x="0.0" y="339" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="ITI-25-mYW"/>
-                                            <constraint firstAttribute="width" secondItem="5uf-sW-KJE" secondAttribute="height" multiplier="1:1" id="fm6-kP-NF3"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="buttonHome"/>
-                                        <connections>
-                                            <action selector="restorePurshase:" destination="UBW-3Z-Mio" eventType="touchUpInside" id="kn7-Fb-Mcf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="tTs-s9-gTt" firstAttribute="width" secondItem="tTs-s9-gTt" secondAttribute="height" multiplier="1:1" id="0sR-2d-wSc"/>
-                                    <constraint firstItem="MIG-V4-uyV" firstAttribute="width" secondItem="MIG-V4-uyV" secondAttribute="height" multiplier="1:1" id="R0E-SS-wvm"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-cz-TPV">
-                                <rect key="frame" x="309" y="16" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0Kl-B6-f6b"/>
-                                    <constraint firstAttribute="height" constant="50" id="eEb-sc-Fen"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="0.90743998339999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="UBW-3Z-Mio" eventType="touchUpInside" id="KVI-PL-OX4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.74940500830000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Vve-pS-Uxu" firstAttribute="centerY" secondItem="yux-Oe-BLz" secondAttribute="centerY" id="3O8-eP-9vO"/>
-                            <constraint firstItem="kE5-mo-d7I" firstAttribute="trailing" secondItem="6Og-cz-TPV" secondAttribute="trailing" constant="16" id="Ycg-GM-rSJ"/>
-                            <constraint firstItem="Vve-pS-Uxu" firstAttribute="centerX" secondItem="yux-Oe-BLz" secondAttribute="centerX" id="rHR-9t-omw"/>
-                            <constraint firstItem="6Og-cz-TPV" firstAttribute="top" secondItem="yux-Oe-BLz" secondAttribute="top" constant="16" id="sSb-yT-VXP"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="kE5-mo-d7I"/>
-                    </view>
-                    <connections>
-                        <outlet property="getFullVersionButton" destination="MIG-V4-uyV" id="kJT-0D-4jz"/>
-                        <outlet property="restorePurshaseButton" destination="5uf-sW-KJE" id="4uH-nt-Oo6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qk5-5N-yq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1148" y="-575"/>
+            <point key="canvasLocation" x="-297" y="-575"/>
         </scene>
     </scenes>
     <resources>
