@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4D46F72F277E010200DE0A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46F72E277E010200DE0A00 /* AppDelegate.swift */; };
 		4D46F73A277E010200DE0A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D46F738277E010200DE0A00 /* Main.storyboard */; };
 		4D46F73C277E010400DE0A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D46F73B277E010400DE0A00 /* Assets.xcassets */; };
-		4D46F73F277E010400DE0A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D46F73D277E010400DE0A00 /* LaunchScreen.storyboard */; };
 		4D47E0B7277E0A4C00DBE39E /* HandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0B6277E0A4C00DBE39E /* HandCell.swift */; };
 		4D47E0CB277E0A5D00DBE39E /* HandAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0B9277E0A5C00DBE39E /* HandAnimations.swift */; };
 		4D47E0CC277E0A5D00DBE39E /* GameScenePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47E0BA277E0A5C00DBE39E /* GameScenePhysics.swift */; };
@@ -50,7 +49,6 @@
 		4D46F72E277E010200DE0A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D46F739277E010200DE0A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D46F73B277E010400DE0A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D46F73E277E010400DE0A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D46F740277E010400DE0A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D47E0B6277E0A4C00DBE39E /* HandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandCell.swift; sourceTree = "<group>"; };
 		4D47E0B9277E0A5C00DBE39E /* HandAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandAnimations.swift; sourceTree = "<group>"; };
@@ -122,14 +120,13 @@
 				4D46F72E277E010200DE0A00 /* AppDelegate.swift */,
 				4D46F738277E010200DE0A00 /* Main.storyboard */,
 				4D46F73B277E010400DE0A00 /* Assets.xcassets */,
-				4D46F73D277E010400DE0A00 /* LaunchScreen.storyboard */,
 				4D47E0E5277E0A7800DBE39E /* Models */,
-				4D47E0DA277E0A7700DBE39E /* Resourses */,
-				4D47E0E8277E0A7900DBE39E /* Utils */,
+				4D47E0B5277E0A4C00DBE39E /* Cells */,
 				4D47E0E1277E0A7800DBE39E /* Views */,
 				4D47E0BD277E0A5C00DBE39E /* Controllers */,
 				4D47E0B8277E0A5C00DBE39E /* GameScene */,
-				4D47E0B5277E0A4C00DBE39E /* Cells */,
+				4D47E0DA277E0A7700DBE39E /* Resourses */,
+				4D47E0E8277E0A7900DBE39E /* Utils */,
 				4D46F740277E010400DE0A00 /* Info.plist */,
 			);
 			path = slap;
@@ -157,15 +154,15 @@
 		4D47E0BD277E0A5C00DBE39E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D47E0C4277E0A5C00DBE39E /* SplashViewController.swift */,
+				4D47E0C8277E0A5C00DBE39E /* StartViewController */,
 				4D47E0BE277E0A5C00DBE39E /* SelectHandViewController */,
 				4D47E0C1277E0A5C00DBE39E /* FinalViewController.swift */,
 				4D47E0C2277E0A5C00DBE39E /* MenuAppViewController.swift */,
 				4D47E0C3277E0A5C00DBE39E /* GameViewController.swift */,
-				4D47E0C4277E0A5C00DBE39E /* SplashViewController.swift */,
 				4D47E0C5277E0A5C00DBE39E /* FullVersionViewController.swift */,
 				4D47E0C6277E0A5C00DBE39E /* GeneralViewController.swift */,
 				4D47E0C7277E0A5C00DBE39E /* MenuGameViewController.swift */,
-				4D47E0C8277E0A5C00DBE39E /* StartViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,7 +271,6 @@
 				4D46F727277E010200DE0A00 /* Sources */,
 				4D46F728277E010200DE0A00 /* Frameworks */,
 				4D46F729277E010200DE0A00 /* Resources */,
-				140EFF450C5EF4BEA7FD92CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,30 +326,12 @@
 				4D47E0EF277E0A7900DBE39E /* wet_towel_on_body-14.flac in Resources */,
 				4D47E0F2277E0A7900DBE39E /* rozo-Regular.ttf in Resources */,
 				4D46F73C277E010400DE0A00 /* Assets.xcassets in Resources */,
-				4D46F73F277E010400DE0A00 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		140EFF450C5EF4BEA7FD92CB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A36CEEAD0A76F419B01471ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,14 +399,6 @@
 				4D46F739277E010200DE0A00 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4D46F73D277E010400DE0A00 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D46F73E277E010400DE0A00 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

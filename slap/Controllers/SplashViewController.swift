@@ -22,10 +22,11 @@ class SplashViewController: GeneralViewController {
         priceManager.getPricesForInApps(inAppsIDs: [handSlapFullVersionID])
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            UIView.animate(withDuration: 0.3) {
+            
+            UIView.animate(withDuration: 0.3, animations: {
                 self.logoImage.alpha = 0
                 self.versionLabel.alpha = 0
-            } completion: { bool in
+            }) { (bool) in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "StartViewController") as! StartViewController
                 self.navigationController?.pushViewController(vc, animated: false)
             }

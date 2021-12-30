@@ -17,8 +17,6 @@ class GameView: UIView {
     @IBOutlet weak var bottomIndicatorThree: UIImageView!
     @IBOutlet weak var topArrowState: UIImageView!
     @IBOutlet weak var bottomArrowState: UIImageView!
-    @IBOutlet weak var topConstr: NSLayoutConstraint!
-    @IBOutlet weak var bottomConstr: NSLayoutConstraint!
     @IBOutlet weak var containerTopForLives: UIView!
     @IBOutlet weak var stackTopInd: UIStackView!
     @IBOutlet weak var topL1: UIImageView!
@@ -53,8 +51,6 @@ class GameView: UIView {
     }
 
     func setConstraint() {
-        topConstr.constant = frame.height / 3
-        bottomConstr .constant = frame.height / 3
         if #available(iOS 13.0, *) {
             let window = UIApplication.shared.windows.first
             let topPadding = window?.safeAreaInsets.top ?? 0.0

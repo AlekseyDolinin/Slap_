@@ -5,6 +5,6 @@ target 'slap' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-    pod 'Google-Mobile-Ads-SDK', '8.13.0'
+  #  pod 'Google-Mobile-Ads-SDK', '8.13.0'
 
 end
