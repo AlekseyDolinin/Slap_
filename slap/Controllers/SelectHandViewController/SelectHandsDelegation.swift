@@ -44,18 +44,20 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
     
     //
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let visibleRectTop = CGRect(origin: viewSelf.topCollection.contentOffset, size: viewSelf.topCollection.bounds.size)
-        let visiblePointTop = CGPoint(x: visibleRectTop.midX, y: visibleRectTop.midY)
-        let visibleIndexPathTop = viewSelf.topCollection.indexPathForItem(at: visiblePointTop)
-        selectIndexHandTop = visibleIndexPathTop!.row
-        viewSelf.selectIndexHandTop = self.selectIndexHandTop
+        if scrollView.restorationIdentifier == "topCollection" {
+            let visibleRectTop = CGRect(origin: viewSelf.topCollection.contentOffset, size: viewSelf.topCollection.bounds.size)
+            let visiblePointTop = CGPoint(x: visibleRectTop.midX, y: visibleRectTop.midY)
+            let visibleIndexPathTop = viewSelf.topCollection.indexPathForItem(at: visiblePointTop)
+            selectIndexHandTop = visibleIndexPathTop!.row
+            checkButtonTop()
+        }
         
-        let visibleRectBottom = CGRect(origin: viewSelf.bottomCollection.contentOffset, size: viewSelf.bottomCollection.bounds.size)
-        let visiblePointBottom = CGPoint(x: visibleRectBottom.midX, y: visibleRectBottom.midY)
-        let visibleIndexPathBottom = viewSelf.bottomCollection.indexPathForItem(at: visiblePointBottom)
-        selectIndexHandBottom = visibleIndexPathBottom!.row
-        viewSelf.selectIndexHandBottom = self.selectIndexHandBottom
-        
-        viewSelf.checkButton()
+        if scrollView.restorationIdentifier == "bottomCollection" {
+            let visibleRectBottom = CGRect(origin: viewSelf.bottomCollection.contentOffset, size: viewSelf.bottomCollection.bounds.size)
+            let visiblePointBottom = CGPoint(x: visibleRectBottom.midX, y: visibleRectBottom.midY)
+            let visibleIndexPathBottom = viewSelf.bottomCollection.indexPathForItem(at: visiblePointBottom)
+            selectIndexHandBottom = visibleIndexPathBottom!.row
+            checkButtonBottom()
+        }
     }
 }

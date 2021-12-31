@@ -95,27 +95,18 @@ class SelectHandViewController: GeneralViewController {
     }
     
     //
-    @IBAction func scrollTopHand(_ sender: UIButton) {
-        
-        if selectIndexHandTop == (countHand - 1) && sender.restorationIdentifier == "NextHandTop" ||
-            selectIndexHandTop == 0 && sender.restorationIdentifier == "PreviousHandTop" {
-            return
-        }
-        sender.restorationIdentifier == "NextHandTop" ? (selectIndexHandTop += 1) : (selectIndexHandTop -= 1)
-        viewSelf.selectIndexHandTop = selectIndexHandTop
-        viewSelf.checkButton()
-        viewSelf.topCollection.scrollToItem(at: IndexPath(row: selectIndexHandTop, section: 0), at: .centeredHorizontally, animated: true)
+    func checkButtonTop() {
+        viewSelf.iconTopReady.isHidden = selectIndexHandTop > 2 ? false : true
+        viewSelf.iconTopReady.image = UIImage(named: selectIndexHandTop > 2 ? "lockIcon" : "checkIcon")
+        viewSelf.topCollectionPreviousButton.alpha = selectIndexHandTop == 0 ? 0.2 : 1
+        viewSelf.topCollectionNextButton.alpha = selectIndexHandTop == (countHand - 1) ? 0.2 : 1
     }
     
     //
-    @IBAction func scrollBottomHand(_ sender: UIButton) {
-        if selectIndexHandBottom == (countHand - 1) && sender.restorationIdentifier == "NextHandBottom" ||
-            selectIndexHandBottom == 0 && sender.restorationIdentifier == "PreviousHandBottom" {
-            return
-        }
-        sender.restorationIdentifier == "NextHandBottom" ? (selectIndexHandBottom += 1) : (selectIndexHandBottom -= 1)
-        viewSelf.selectIndexHandBottom = selectIndexHandBottom
-        viewSelf.checkButton()
-        viewSelf.bottomCollection.scrollToItem(at: IndexPath(row: selectIndexHandBottom, section: 0), at: .centeredHorizontally, animated: true)
+    func checkButtonBottom() {
+        viewSelf.iconBottomReady.isHidden = selectIndexHandBottom > 2 ? false : true
+        viewSelf.iconBottomReady.image = UIImage(named: selectIndexHandBottom > 2 ? "lockIcon" : "checkIcon")
+        viewSelf.bottomCollectionPreviousButton.alpha = selectIndexHandBottom == 0 ? 0.2 : 1
+        viewSelf.bottomCollectionNextButton.alpha = selectIndexHandBottom == (countHand - 1) ? 0.2 : 1
     }
 }
