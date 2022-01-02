@@ -917,6 +917,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qkr-tY-vrx"/>
                     </view>
+                    <connections>
+                        <outlet property="soundButton" destination="0O6-wo-me6" id="ZrR-oF-jYN"/>
+                        <outlet property="vibrationButton" destination="ce3-34-3UR" id="OFD-gW-EVq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWv-6l-bdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
