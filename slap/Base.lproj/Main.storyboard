@@ -986,13 +986,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разблокировать ххх рук и удаление всей рекламы в приложении." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-Pr-msj">
+                                        <rect key="frame" x="40" y="100" width="295" height="72"/>
+                                        <fontDescription key="fontDescription" name="rozo-Regular" family="rozo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="3yB-Pr-msj" firstAttribute="leading" secondItem="4qU-h8-pN1" secondAttribute="leading" constant="40" id="DWG-CR-cKD"/>
                                     <constraint firstAttribute="trailing" secondItem="efm-T5-OIm" secondAttribute="trailing" id="H2m-Lw-ZLD"/>
                                     <constraint firstItem="nWy-e1-2At" firstAttribute="centerX" secondItem="4qU-h8-pN1" secondAttribute="centerX" id="PQV-g0-Kq3"/>
                                     <constraint firstItem="efm-T5-OIm" firstAttribute="top" secondItem="4qU-h8-pN1" secondAttribute="top" id="Slw-0P-reY"/>
+                                    <constraint firstAttribute="trailing" secondItem="3yB-Pr-msj" secondAttribute="trailing" constant="40" id="aW9-nK-Hhp"/>
                                     <constraint firstAttribute="bottom" secondItem="nWy-e1-2At" secondAttribute="bottom" constant="40" id="cBP-yK-Alk"/>
+                                    <constraint firstItem="3yB-Pr-msj" firstAttribute="top" secondItem="4qU-h8-pN1" secondAttribute="top" constant="100" id="iLv-fP-acP"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FcN-hS-6mr">
@@ -1036,7 +1045,7 @@
         <image name="buttonSoundOn" width="280" height="280"/>
         <image name="buttonVibrationOn" width="280" height="280"/>
         <image name="checkIcon" width="280" height="280"/>
-        <image name="hand_0" width="421" height="1801"/>
+        <image name="hand_0" width="210" height="900"/>
         <image name="hand_1" width="421" height="1801"/>
         <image name="liveIndicator" width="57" height="97"/>
         <image name="logo_1" width="1200" height="900"/>
