@@ -78,14 +78,10 @@ class SelectHandViewController: GeneralViewController {
     
     //
     func bottomPlayerReady() {
-        if StoreManager.isFullVersion() == false  && selectIndexHandBottom > 2 {
-            showModalFullVersion() // показ модалки о покупке
-        } else { // select hand
-            bottomPlayerReadyBool = true
-            viewSelf.iconBottomReady.isHidden = false
-            if topPlayerReadyBool == true && bottomPlayerReadyBool == true {
-                goToGame()
-            }
+        bottomPlayerReadyBool = true
+        viewSelf.iconBottomReady.isHidden = false
+        if topPlayerReadyBool == true && bottomPlayerReadyBool == true {
+            goToGame()
         }
     }
     

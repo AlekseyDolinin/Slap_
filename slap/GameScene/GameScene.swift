@@ -85,7 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         topHand.yScale = -1
         topHand.xScale = -1
         topHand.zPosition = 0
-        topHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 40, center: CGPoint(x: 0, y: 0) )
+        topHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 20, center: CGPoint(x: 0, y: 0) )
         topHand.physicsBody?.isDynamic = true
         topHand.physicsBody?.affectedByGravity = false
         topHand.physicsBody?.categoryBitMask = topHandBitMask
@@ -101,7 +101,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bottomHand.size = CGSize(width: size.width * 0.4, height: size.height * 0.8)
         topHand.yScale = -1
         bottomHand.zPosition = 0
-        bottomHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 40, center: CGPoint(x: 0, y: 0) )
+        bottomHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 20, center: CGPoint(x: 0, y: 0) )
         bottomHand.physicsBody?.isDynamic = true
         bottomHand.physicsBody?.affectedByGravity = false
         bottomHand.physicsBody?.categoryBitMask = bottomHandBitMask

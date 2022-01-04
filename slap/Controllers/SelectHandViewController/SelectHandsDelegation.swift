@@ -23,6 +23,8 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
         //
         if collectionView.restorationIdentifier == "bottomCollection" {
             bottomPlayerReady()
+            
+//            (StoreManager.isFullVersion() == false && selectIndexHandBottom > 2) ? showModalFullVersion() : bottomPlayerReady()
         }
     }
     
