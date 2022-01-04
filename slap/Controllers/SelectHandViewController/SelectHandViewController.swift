@@ -11,7 +11,7 @@ class SelectHandViewController: GeneralViewController {
     var selectIndexHandBottom = 0
     var topPlayerReadyBool = false
     var bottomPlayerReadyBool = false
-    var countHand = 4
+    var countHand = 7
 
     //
     override func viewDidLoad() {
