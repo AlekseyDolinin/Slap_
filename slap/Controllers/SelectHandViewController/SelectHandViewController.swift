@@ -11,16 +11,19 @@ class SelectHandViewController: GeneralViewController {
     var selectIndexHandBottom = 0
     var topPlayerReadyBool = false
     var bottomPlayerReadyBool = false
-    var countHand = 7
-
+    var countHand = 0
+    
     //
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getCountHands()
+        
         viewSelf.topCollection.delegate = self
         viewSelf.topCollection.dataSource = self
         viewSelf.bottomCollection.delegate = self
         viewSelf.bottomCollection.dataSource = self
-
+        
         viewSelf.countHand = self.countHand
         
         //
@@ -31,6 +34,20 @@ class SelectHandViewController: GeneralViewController {
             }
         }
         print("is full version: \(StoreManager.isFullVersion())")
+    }
+    
+    //
+    func getCountHands() {
+        do {
+            let items = try FileManager.default.contentsOfDirectory(atPath: Bundle.main.resourcePath!)
+            for item in items {
+                if item.prefix(5) == "hand_" && item.suffix(4) == ".png" {
+                    countHand += 1
+                }
+            }
+        } catch {
+            print("failed to read directory")
+        }
     }
     
     //
@@ -90,8 +107,8 @@ class SelectHandViewController: GeneralViewController {
         if selectIndexHandTop == 0 {return}
         selectIndexHandTop = selectIndexHandTop - 1
         viewSelf.topCollection.scrollToItem(at: IndexPath(item: selectIndexHandTop, section: 0),
-                                               at: .centeredHorizontally,
-                                               animated: true)
+                                            at: .centeredHorizontally,
+                                            animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.viewSelf.checkButtonTop(selectIndexHandTop: self.selectIndexHandTop)
         }
@@ -102,8 +119,8 @@ class SelectHandViewController: GeneralViewController {
         if selectIndexHandTop == (countHand - 1) {return}
         selectIndexHandTop = selectIndexHandTop + 1
         viewSelf.topCollection.scrollToItem(at: IndexPath(item: selectIndexHandTop, section: 0),
-                                               at: .centeredHorizontally,
-                                               animated: true)
+                                            at: .centeredHorizontally,
+                                            animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.viewSelf.checkButtonTop(selectIndexHandTop: self.selectIndexHandTop)
         }
