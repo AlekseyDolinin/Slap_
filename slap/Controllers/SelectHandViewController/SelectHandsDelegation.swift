@@ -22,9 +22,9 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
         }
         //
         if collectionView.restorationIdentifier == "bottomCollection" {
-            bottomPlayerReady()
+//            bottomPlayerReady()
             
-//            (StoreManager.isFullVersion() == false && selectIndexHandBottom > 2) ? showModalFullVersion() : bottomPlayerReady()
+            (StoreManager.isFullVersion() == false && selectIndexHandBottom > 2) ? showModalFullVersion() : bottomPlayerReady()
         }
     }
     
