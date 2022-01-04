@@ -72,6 +72,8 @@ extension StoreManager: SKPaymentTransactionObserver {
                 }
             case .failed:
                 queue.finishTransaction(transaction)
+                print("failed")
+                NotificationCenter.default.post(name: nTransactionFailed, object: nil)
             case .restored:
                 print("restored")
                 print("модалка благодарности за возврат")

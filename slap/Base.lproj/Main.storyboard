@@ -978,7 +978,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="get full version" backgroundImage="buttonEmpty_2"/>
                                                 <connections>
-                                                    <action selector="restorePurshase:" destination="WZr-8J-X1z" eventType="touchUpInside" id="PRI-Dp-eIG"/>
+                                                    <action selector="getFullVersion:" destination="WZr-8J-X1z" eventType="touchUpInside" id="y86-SQ-3Ih"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsv-tN-jy4">
@@ -993,7 +993,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="restore purshase" backgroundImage="buttonEmpty_2"/>
                                                 <connections>
-                                                    <action selector="getFullVersion:" destination="WZr-8J-X1z" eventType="touchUpInside" id="5Zz-rC-Wvp"/>
+                                                    <action selector="restorePurshase:" destination="WZr-8J-X1z" eventType="touchUpInside" id="zn6-Dy-cNz"/>
                                                 </connections>
                                             </button>
                                         </subviews>

@@ -12,14 +12,30 @@ class FullVersionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(forName: nTransactionFailed, object: nil, queue: nil) { notification in
-            self.viewSelf.hideLoader()
+            
+            let alert = UIAlertController(title: "Error", message: "Please try later", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Close", style: .default) { (action) in
+                self.viewSelf.hideLoader()
+            }
+            alert.addAction(action)
+            
+            self.present(alert, animated: true) {
+                
+            }
         }
     }
+    
     
     ///
     func getFullVersion() {
         print("getFullVersion")
         storeManager.buyInApp(inAppID: handSlapFullVersionID)
+    }
+    
+    ///
+    func restorePurshase() {
+        print("restorePurshase")
+        storeManager.restorePurchase()
     }
     
     //
@@ -28,11 +44,22 @@ class FullVersionViewController: UIViewController {
         if StoreManager.isFullVersion() == false {
             getFullVersion()
         }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            self.dismiss(animated: true)
+//        }
     }
     
     //
     @IBAction func restorePurshase(_ sender: Any) {
-        print("restorePurshase")
+        viewSelf.showLoader()
+        if StoreManager.isFullVersion() == false {
+            restorePurshase()
+        }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            self.dismiss(animated: true)
+//        }
     }
     
     //
@@ -53,11 +80,6 @@ class FullVersionView: UIView {
     
     override func awakeFromNib() {
         setUI()
-    }
-    
-    
-    func configure() {
-        
     }
     
     ///

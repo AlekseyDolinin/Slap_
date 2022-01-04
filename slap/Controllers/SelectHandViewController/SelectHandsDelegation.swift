@@ -51,7 +51,7 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
             let visiblePointTop = CGPoint(x: visibleRectTop.midX, y: visibleRectTop.midY)
             let visibleIndexPathTop = viewSelf.topCollection.indexPathForItem(at: visiblePointTop)
             selectIndexHandTop = visibleIndexPathTop!.row
-            checkButtonTop()
+            viewSelf.checkButtonTop(selectIndexHandTop: selectIndexHandTop)
         }
         
         if scrollView.restorationIdentifier == "bottomCollection" {
@@ -59,7 +59,7 @@ extension SelectHandViewController: UICollectionViewDataSource, UICollectionView
             let visiblePointBottom = CGPoint(x: visibleRectBottom.midX, y: visibleRectBottom.midY)
             let visibleIndexPathBottom = viewSelf.bottomCollection.indexPathForItem(at: visiblePointBottom)
             selectIndexHandBottom = visibleIndexPathBottom!.row
-            checkButtonBottom()
+            viewSelf.checkButtonBottom(selectIndexHandBottom: selectIndexHandBottom)
         }
     }
 }

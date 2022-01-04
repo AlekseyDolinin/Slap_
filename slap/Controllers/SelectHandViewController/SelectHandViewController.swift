@@ -85,63 +85,51 @@ class SelectHandViewController: GeneralViewController {
         }
     }
     
-    //
-    func checkButtonTop() {
-        viewSelf.iconTopReady.image = UIImage(named: selectIndexHandTop > 2 ? "lockIcon" : "checkIcon")
-        viewSelf.topCollectionPreviousButton.alpha = selectIndexHandTop == 0 ? 0.2 : 1
-        viewSelf.topCollectionNextButton.alpha = selectIndexHandTop == (countHand - 1) ? 0.2 : 1
-        viewSelf.iconTopReady.isHidden = selectIndexHandTop > 2 ? false : true
-    }
-    
-    //
-    func checkButtonBottom() {
-        viewSelf.iconBottomReady.image = UIImage(named: selectIndexHandBottom > 2 ? "lockIcon" : "checkIcon")
-        viewSelf.bottomCollectionPreviousButton.alpha = selectIndexHandBottom == 0 ? 0.2 : 1
-        viewSelf.bottomCollectionNextButton.alpha = selectIndexHandBottom == (countHand - 1) ? 0.2 : 1
-        viewSelf.iconBottomReady.isHidden = selectIndexHandBottom > 2 ? false : true
-    }
-    
-    ///
-    @IBAction func bottomHandPrew(_ sender: Any) {
-        selectIndexHandBottom = selectIndexHandBottom - 1
-        viewSelf.bottomCollection.scrollToItem(at: IndexPath(item: selectIndexHandBottom, section: 0),
-                                               at: .centeredHorizontally,
-                                               animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.checkButtonBottom()
-        }
-    }
-    
-    ///
-    @IBAction func bottomHandNext(_ sender: Any) {
-        selectIndexHandBottom = selectIndexHandBottom + 1
-        viewSelf.bottomCollection.scrollToItem(at: IndexPath(item: selectIndexHandBottom, section: 0),
-                                               at: .centeredHorizontally,
-                                               animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.checkButtonBottom()
-        }
-    }
-    
     ///
     @IBAction func topHandPrew(_ sender: Any) {
+        if selectIndexHandTop == 0 {return}
         selectIndexHandTop = selectIndexHandTop - 1
         viewSelf.topCollection.scrollToItem(at: IndexPath(item: selectIndexHandTop, section: 0),
                                                at: .centeredHorizontally,
                                                animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.checkButtonTop()
+            self.viewSelf.checkButtonTop(selectIndexHandTop: self.selectIndexHandTop)
         }
     }
     
     ///
     @IBAction func topHandNext(_ sender: Any) {
+        if selectIndexHandTop == (countHand - 1) {return}
         selectIndexHandTop = selectIndexHandTop + 1
         viewSelf.topCollection.scrollToItem(at: IndexPath(item: selectIndexHandTop, section: 0),
                                                at: .centeredHorizontally,
                                                animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.checkButtonTop()
+            self.viewSelf.checkButtonTop(selectIndexHandTop: self.selectIndexHandTop)
+        }
+    }
+    
+    ///
+    @IBAction func bottomHandPrew(_ sender: Any) {
+        if selectIndexHandBottom == 0 {return}
+        selectIndexHandBottom = selectIndexHandBottom - 1
+        viewSelf.bottomCollection.scrollToItem(at: IndexPath(item: selectIndexHandBottom, section: 0),
+                                               at: .centeredHorizontally,
+                                               animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.viewSelf.checkButtonBottom(selectIndexHandBottom: self.selectIndexHandBottom)
+        }
+    }
+    
+    ///
+    @IBAction func bottomHandNext(_ sender: Any) {
+        if selectIndexHandBottom == (countHand - 1) {return}
+        selectIndexHandBottom = selectIndexHandBottom + 1
+        viewSelf.bottomCollection.scrollToItem(at: IndexPath(item: selectIndexHandBottom, section: 0),
+                                               at: .centeredHorizontally,
+                                               animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.viewSelf.checkButtonBottom(selectIndexHandBottom: self.selectIndexHandBottom)
         }
     }
     

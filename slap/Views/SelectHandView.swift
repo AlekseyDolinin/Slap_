@@ -11,8 +11,6 @@ class SelectHandView: UIView {
     @IBOutlet weak var iconTopReady: UIImageView!
     @IBOutlet weak var iconBottomReady: UIImageView!
     
-//    var selectIndexHandTop = 0
-//    var selectIndexHandBottom = 0
     var countHand: Int!
     
     override func awakeFromNib() {
@@ -20,57 +18,21 @@ class SelectHandView: UIView {
         setUI()
     }
     
-//    // показ и скрытие переключателей рук
-//    // при крайних положениях скрываются кнопки далее
-//    func checkButtonTop() {
-//        topCollectionPreviousButton.alpha = selectIndexHandTop == 0 ? 0.2 : 1
-//        topCollectionNextButton.alpha = selectIndexHandTop == (countHand - 1) ? 0.2 : 11
-//        setLockIconToHandTop()
-//    }
-//
-//    func checkButtonBottom() {
-//        bottomCollectionPreviousButton.alpha = selectIndexHandBottom == 0 ? 0.2 : 1
-//        bottomCollectionNextButton.alpha = selectIndexHandBottom == (countHand - 1) ? 0.2 : 1
-////        setLockIconToHandBottom()
-//    }
-
-//    func setLockIconToHandTop() {
-//
-//    }
+    //
+    func checkButtonTop(selectIndexHandTop: Int) {
+        iconTopReady.image = UIImage(named: selectIndexHandTop > 2 ? "lockIcon" : "checkIcon")
+        topCollectionPreviousButton.alpha = selectIndexHandTop == 0 ? 0.2 : 1
+        topCollectionNextButton.alpha = selectIndexHandTop == (countHand - 1) ? 0.2 : 1
+        iconTopReady.isHidden = selectIndexHandTop > 2 ? false : true
+    }
     
-//    func setLockIconToHandBottom() {
-//        print(selectIndexHandBottom)
-//
-//        if selectIndexHandBottom > 2 {
-//            iconBottomReady.isHidden = false
-//        }
-//    }
-    
-    
-    
-//    //
-//    func setLockIconToHand() {
-//
-//        print(selectIndexHandTop)
-//        print(selectIndexHandBottom)
-//
-////        if StoreManager.isFullVersion() {
-////            iconTopReady.image = UIImage(named: "checkIcon")
-////            iconBottomReady.image = UIImage(named: "checkIcon")
-////            return
-////        }
-////
-//        if selectIndexHandTop > 2 {
-//            iconTopReady.isHidden = false
-//        }
-//
-//        if selectIndexHandBottom > 2 {
-//            iconBottomReady.isHidden = false
-//        }
-//
-////        iconTopReady.image = UIImage(named: selectIndexHandTop < 3 ? "checkIcon" : "lockIcon")
-////        iconBottomReady.image = UIImage(named: selectIndexHandBottom < 3 ? "checkIcon" : "lockIcon")
-//    }
+    //
+    func checkButtonBottom(selectIndexHandBottom: Int) {
+        iconBottomReady.image = UIImage(named: selectIndexHandBottom > 2 ? "lockIcon" : "checkIcon")
+        bottomCollectionPreviousButton.alpha = selectIndexHandBottom == 0 ? 0.2 : 1
+        bottomCollectionNextButton.alpha = selectIndexHandBottom == (countHand - 1) ? 0.2 : 1
+        iconBottomReady.isHidden = selectIndexHandBottom > 2 ? false : true
+    }
 }
 
 extension SelectHandView {
@@ -80,8 +42,9 @@ extension SelectHandView {
         bottomCollection.automaticallyAdjustsScrollIndicatorInsets = false
         topCollection.transform = CGAffineTransform(rotationAngle: .pi)
         iconTopReady.transform = CGAffineTransform(rotationAngle: .pi)
-        topCollectionPreviousButton.alpha  = 0.2
-        bottomCollectionPreviousButton.alpha  = 0.2
+        topCollectionPreviousButton.alpha = 0.2
+        bottomCollectionPreviousButton.alpha = 0.2
+        
         //
         iconTopReady.isHidden = true
         iconBottomReady.isHidden = true
