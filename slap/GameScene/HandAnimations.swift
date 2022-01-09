@@ -33,7 +33,6 @@ extension GameScene {
         topHandIsMoving = true
         if bottomHandIsMoving == false {
             gameVC.updateFalseStartCount()
-            animationLockHand()
         }
         topHand.run(blockHideTop) {
             self.topHandIsMoving = false
@@ -46,21 +45,9 @@ extension GameScene {
         bottomHandIsMoving = true
         if topHandIsMoving == false {
             gameVC.updateFalseStartCount()
-            animationLockHand()
         }
         bottomHand.run(blockHideBottom) {
             self.bottomHandIsMoving = false
-        }
-    }
-    
-    //
-    func animationLockHand() {
-        if gameVC.lockHand == true {
-            if gameVC.game.sideAttack == .bottomHandAttack {
-                topHand.alpha = 0.3
-            } else {
-                bottomHand.alpha = 0.3
-            }
         }
     }
 }

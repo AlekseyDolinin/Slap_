@@ -41,6 +41,7 @@ class GameViewController: GeneralViewController {
         
         if SettingApp.isSoundOn() {
             Sound.setSlapEffect()
+            Sound.setLockEffect()
         }
         
     }
@@ -103,6 +104,12 @@ class GameViewController: GeneralViewController {
         // блокировка руки
         if game.falseStartCount == 3 {
             lockHand = true
+            //звук блокировки руки
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                if SettingApp.isSoundOn() {
+                    Sound.playerLockEffect?.play()
+                }
+            }
         }
     }
     

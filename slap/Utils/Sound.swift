@@ -4,6 +4,7 @@ import AVFoundation
 class Sound {
     
     static var playerSlapEffect: AVAudioPlayer?
+    static var playerLockEffect: AVAudioPlayer?
     
     ///
     class func setSlapEffect() {
@@ -19,8 +20,24 @@ class Sound {
     }
     
     ///
+    class func setLockEffect() {
+        print("playLockEffect")
+        guard let url = Bundle.main.url(forResource: "doorClose07", withExtension: "flac") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            playerLockEffect = try AVAudioPlayer(contentsOf: url, fileTypeHint: "flac")
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    ///
     class func removePlayers() {
         playerSlapEffect?.stop()
         playerSlapEffect = nil
+        
+        playerLockEffect?.stop()
+        playerLockEffect = nil
     }
 }

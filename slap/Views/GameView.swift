@@ -41,6 +41,8 @@ class GameView: UIView {
     @IBOutlet weak var bottomL8: UIImageView!
     @IBOutlet weak var bottomL9: UIImageView!
     @IBOutlet weak var bottomL10: UIImageView!
+    @IBOutlet weak var lockTopHand: UIImageView!
+    @IBOutlet weak var lockBottomHand: UIImageView!
     
     var game: Game!
     
@@ -78,6 +80,8 @@ class GameView: UIView {
             topDescriptionLabel.text = "Attack"
             bottomDescriptionLabel.text = "defense"
         }
+        lockTopHand.isHidden = true
+        lockBottomHand.isHidden = true
     }
     
     //
@@ -133,10 +137,15 @@ class GameView: UIView {
         }
         
         if game.falseStartCount == 3 {
-            if game.sideAttack == .bottomHandAttack {
-                topDescriptionLabel.text = "lock"
-            } else {
-                bottomDescriptionLabel.text = "lock"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                if self.self.game.sideAttack == .bottomHandAttack {
+                    self.topDescriptionLabel.text = "lock"
+                    self.lockTopHand.isHidden = false
+                } else {
+                    self.bottomDescriptionLabel.text = "lock"
+                    self.lockBottomHand.isHidden = false
+
+                }
             }
         }
     }

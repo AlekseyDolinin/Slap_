@@ -14,7 +14,7 @@ extension GameScene {
         }
         gameVC.shake()
         gameVC.updateGame()
-        unlockAllHand()
+        gameVC.showAllIndicatorsFalseStart()
     }
     
     ///

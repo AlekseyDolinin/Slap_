@@ -81,7 +81,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createTopHand() {
         topHand.name = "topHand"
         topHand.position = CGPoint(x: size.width / 2, y: size.height * 1.5)
-        topHand.size = CGSize(width: size.width * 0.4, height: size.height * 0.8)
+        topHand.size = CGSize(width: size.width * 0.35, height: size.width * 1.4)
         topHand.yScale = -1
         topHand.xScale = -1
         topHand.zPosition = 0
@@ -98,7 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createBottomHand() {
         bottomHand.name = "bottomHand"
         bottomHand.position = CGPoint(x: size.width / 2, y: -size.height / 2)
-        bottomHand.size = CGSize(width: size.width * 0.4, height: size.height * 0.8)
+        bottomHand.size = CGSize(width: size.width * 0.35, height: size.width * 1.4)
         topHand.yScale = -1
         bottomHand.zPosition = 0
         bottomHand.physicsBody = SKPhysicsBody(circleOfRadius: bottomHand.size.height / 2 - 20, center: CGPoint(x: 0, y: 0) )
@@ -108,12 +108,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bottomHand.physicsBody?.contactTestBitMask = topHandBitMask
         bottomHand.physicsBody?.collisionBitMask = noneBitMask
         bottomHand.run(SKAction.moveTo(y: 0, duration: 0.3))
-    }
-    
-    //
-    func unlockAllHand() {
-        gameVC.showAllIndicatorsFalseStart()
-        topHand.alpha = 1.0
-        bottomHand.alpha = 1.0
     }
 }
