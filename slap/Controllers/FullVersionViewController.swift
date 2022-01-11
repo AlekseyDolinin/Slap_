@@ -25,7 +25,6 @@ class FullVersionViewController: UIViewController {
         }
     }
     
-    
     ///
     func getFullVersion() {
         print("getFullVersion")

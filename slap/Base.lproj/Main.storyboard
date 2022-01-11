@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y65-wE-hEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y65-wE-hEf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +39,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="kfo-Th-x0c"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="2dV-Li-0aU" firstAttribute="centerY" secondItem="7Yv-Ko-5Fa" secondAttribute="centerY" id="34a-sj-1K6"/>
                             <constraint firstItem="kfo-Th-x0c" firstAttribute="trailing" secondItem="Li3-pX-4vv" secondAttribute="trailing" id="HiX-mV-4fB"/>
@@ -50,7 +53,6 @@
                             <constraint firstItem="kfo-Th-x0c" firstAttribute="trailing" secondItem="2dV-Li-0aU" secondAttribute="trailing" constant="40" id="uQ3-DQ-ejp"/>
                             <constraint firstItem="akq-Zf-xFA" firstAttribute="centerX" secondItem="7Yv-Ko-5Fa" secondAttribute="centerX" id="zM9-yZ-m6m"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kfo-Th-x0c"/>
                     </view>
                     <navigationItem key="navigationItem" id="l3f-h0-Azd"/>
                     <connections>
@@ -360,6 +362,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="pBE-HL-p5q"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="htR-y2-VMe" firstAttribute="top" secondItem="KUG-vj-fme" secondAttribute="bottom" constant="16" id="0s4-QB-Et3"/>
@@ -397,7 +400,6 @@
                             <constraint firstItem="pBE-HL-p5q" firstAttribute="trailing" secondItem="CGN-Rm-3IF" secondAttribute="trailing" constant="18" id="y14-BY-18C"/>
                             <constraint firstItem="Jrb-FE-CjO" firstAttribute="centerX" secondItem="Fmd-Vi-r0G" secondAttribute="centerX" id="yDb-A4-Icm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pBE-HL-p5q"/>
                         <connections>
                             <outlet property="bottomArrowState" destination="htR-y2-VMe" id="TB7-yv-g1r"/>
                             <outlet property="bottomDescription" destination="h2W-Hk-zwY" id="iLm-BN-hGG"/>
@@ -533,6 +535,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="UKh-Tf-cen"/>
                         <color key="backgroundColor" white="0.0" alpha="0.74940500830000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YZL-ZC-jpv" firstAttribute="centerY" secondItem="mNb-At-FTN" secondAttribute="centerY" id="98P-sT-Jgi"/>
@@ -546,7 +549,6 @@
                             <constraint firstItem="1sP-Mh-rlX" firstAttribute="centerX" secondItem="mNb-At-FTN" secondAttribute="centerX" id="k89-MD-Tq3"/>
                             <constraint firstItem="Fsy-I7-bSs" firstAttribute="top" secondItem="FYc-nT-aZA" secondAttribute="bottom" id="mvu-RP-er5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="UKh-Tf-cen"/>
                     </view>
                     <connections>
                         <outlet property="bottomButtonStack" destination="1sP-Mh-rlX" id="ymA-Pm-TA6"/>
@@ -608,7 +610,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txM-Kl-ZMH">
-                                <rect key="frame" x="37.5" y="537" width="300" height="90"/>
+                                <rect key="frame" x="37.5" y="521" width="300" height="90"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="JqK-MI-1XT"/>
@@ -625,7 +627,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="aQs-CT-X4S"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6QX-Be-VdN" secondAttribute="trailing" constant="32" id="1zF-0V-0mR"/>
                             <constraint firstItem="bcq-4X-Ll5" firstAttribute="leading" secondItem="6oB-7a-3CR" secondAttribute="leading" constant="120" id="8c7-LL-gfY"/>
@@ -637,10 +640,9 @@
                             <constraint firstItem="EHf-W0-Dgb" firstAttribute="leading" secondItem="aQs-CT-X4S" secondAttribute="leading" id="dNW-fb-ocb"/>
                             <constraint firstAttribute="bottom" secondItem="EHf-W0-Dgb" secondAttribute="bottom" id="liz-Gi-b6I"/>
                             <constraint firstItem="bcq-4X-Ll5" firstAttribute="centerY" secondItem="6oB-7a-3CR" secondAttribute="centerY" id="oRK-jv-odm"/>
-                            <constraint firstItem="aQs-CT-X4S" firstAttribute="bottom" secondItem="txM-Kl-ZMH" secondAttribute="bottom" constant="40" id="vnj-7v-IIK"/>
+                            <constraint firstItem="aQs-CT-X4S" firstAttribute="bottom" secondItem="txM-Kl-ZMH" secondAttribute="bottom" constant="56" id="vnj-7v-IIK"/>
                             <constraint firstItem="txM-Kl-ZMH" firstAttribute="centerX" secondItem="6oB-7a-3CR" secondAttribute="centerX" id="vwA-5G-qym"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aQs-CT-X4S"/>
                         <connections>
                             <outlet property="fullVersionButton" destination="txM-Kl-ZMH" id="7bz-M6-1Ua"/>
                             <outlet property="startGameButton" destination="bcq-4X-Ll5" id="2Vn-hH-bMV"/>
@@ -812,7 +814,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="h65-cS-ZcH"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="Fg4-Sk-g2N" firstAttribute="leading" secondItem="h65-cS-ZcH" secondAttribute="leading" constant="8" id="1Cz-dV-a6R"/>
                             <constraint firstAttribute="trailing" secondItem="sYi-D7-RQz" secondAttribute="trailing" id="3I0-cQ-Sxb"/>
@@ -841,7 +844,6 @@
                             <constraint firstItem="MBB-lf-vpJ" firstAttribute="centerY" secondItem="sNX-Q6-ifk" secondAttribute="centerY" id="td6-oU-pNX"/>
                             <constraint firstAttribute="trailing" secondItem="sNX-Q6-ifk" secondAttribute="trailing" constant="48" id="yr6-cU-C9D"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="h65-cS-ZcH"/>
                         <connections>
                             <outlet property="bottomCollection" destination="sNX-Q6-ifk" id="YZy-oR-FnH"/>
                             <outlet property="bottomCollectionNextButton" destination="04n-1j-OpB" id="Ikr-9H-VWH"/>
@@ -942,6 +944,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="qkr-tY-vrx"/>
                         <color key="backgroundColor" white="0.0" alpha="0.74940500830000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wdq-t3-M0Q" firstAttribute="centerX" secondItem="sPm-jh-N06" secondAttribute="centerX" id="I6v-Le-TA9"/>
@@ -949,7 +952,6 @@
                             <constraint firstItem="wdq-t3-M0Q" firstAttribute="centerY" secondItem="sPm-jh-N06" secondAttribute="centerY" id="ere-mZ-XAc"/>
                             <constraint firstItem="ayw-o1-Bqw" firstAttribute="top" secondItem="sPm-jh-N06" secondAttribute="top" id="vnt-Gv-bGD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qkr-tY-vrx"/>
                     </view>
                     <connections>
                         <outlet property="soundButton" destination="0O6-wo-me6" id="ZrR-oF-jYN"/>
@@ -1042,6 +1044,7 @@
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GPX-tS-tQk"/>
                         <color key="backgroundColor" white="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4qU-h8-pN1" firstAttribute="leading" secondItem="GPX-tS-tQk" secondAttribute="leading" id="50v-tc-1F1"/>
@@ -1051,7 +1054,6 @@
                             <constraint firstItem="FcN-hS-6mr" firstAttribute="centerX" secondItem="zPT-FY-03Y" secondAttribute="centerX" id="cDM-do-ctf"/>
                             <constraint firstItem="FcN-hS-6mr" firstAttribute="centerY" secondItem="zPT-FY-03Y" secondAttribute="centerY" id="shQ-zT-rYq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GPX-tS-tQk"/>
                         <connections>
                             <outlet property="contentView" destination="4qU-h8-pN1" id="hYu-pB-F67"/>
                             <outlet property="loader" destination="FcN-hS-6mr" id="Suj-AC-vN3"/>
@@ -1085,6 +1087,15 @@
         <image name="logo_1" width="1200" height="900"/>
         <image name="logo_2" width="1240" height="360"/>
         <image name="roosterIcon" width="140" height="140"/>
-        <image name="xmark" catalog="system" width="64" height="56"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

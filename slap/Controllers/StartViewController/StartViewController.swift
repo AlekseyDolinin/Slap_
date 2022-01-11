@@ -1,21 +1,24 @@
 import UIKit
+import GoogleMobileAds
 
-class StartViewController: GeneralViewController {
+class StartViewController: GeneralViewController, GADBannerViewDelegate {
 
     var viewSelf: StartView! {
         guard isViewLoaded else {return nil}
         return (view as! StartView)
     }
-        
+    
+    var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        setGadBanner()
+        if StoreManager.isFullVersion() == false {
+            setGadBanner()
+        }
     }
     
     @IBAction func goToSelectHand(_ sender: Any) {

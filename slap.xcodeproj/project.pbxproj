@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,7 @@
 		4D6F8EBC2784B90800FC6877 /* hand_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F8EB52784B90700FC6877 /* hand_1.png */; };
 		4D6F8EBD2784B90800FC6877 /* hand_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F8EB62784B90700FC6877 /* hand_2.png */; };
 		4D6F8EBF278B064400FC6877 /* doorClose07.flac in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F8EBE278B064300FC6877 /* doorClose07.flac */; };
+		911599D3278D9E260069A1EF /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911599D2278D9E260069A1EF /* FullScreenGoogleAds.swift */; };
 		EA9E0262DD4AD2531019F264 /* Pods_slap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF32F9EA151CEA8688F47A2 /* Pods_slap.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		4D6F8EB62784B90700FC6877 /* hand_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_2.png; sourceTree = "<group>"; };
 		4D6F8EBE278B064300FC6877 /* doorClose07.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = doorClose07.flac; sourceTree = "<group>"; };
 		7938F4D1ACD9AC5AEC930A93 /* Pods-slap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slap.release.xcconfig"; path = "Target Support Files/Pods-slap/Pods-slap.release.xcconfig"; sourceTree = "<group>"; };
+		911599D2278D9E260069A1EF /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
 		F4BDC7BE7C9600FB7926321B /* Pods-slap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slap.debug.xcconfig"; path = "Target Support Files/Pods-slap/Pods-slap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +163,7 @@
 				4D47E0C4277E0A5C00DBE39E /* SplashViewController.swift */,
 				4D47E0C8277E0A5C00DBE39E /* StartViewController */,
 				4D47E0BE277E0A5C00DBE39E /* SelectHandViewController */,
-				4D47E0C1277E0A5C00DBE39E /* FinalViewController.swift */,
+				911599D1278D9E020069A1EF /* FinalViewController */,
 				4D47E0C2277E0A5C00DBE39E /* MenuAppViewController.swift */,
 				4D47E0C3277E0A5C00DBE39E /* GameViewController.swift */,
 				4D47E0C5277E0A5C00DBE39E /* FullVersionViewController.swift */,
@@ -257,6 +259,15 @@
 			path = hands;
 			sourceTree = "<group>";
 		};
+		911599D1278D9E020069A1EF /* FinalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D47E0C1277E0A5C00DBE39E /* FinalViewController.swift */,
+				911599D2278D9E260069A1EF /* FullScreenGoogleAds.swift */,
+			);
+			path = FinalViewController;
+			sourceTree = "<group>";
+		};
 		A32C8D17CB10CCDF756D94F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +296,7 @@
 				4D46F727277E010200DE0A00 /* Sources */,
 				4D46F728277E010200DE0A00 /* Frameworks */,
 				4D46F729277E010200DE0A00 /* Resources */,
+				8C392705BB2363C20CE64526 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,7 +314,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = alekseyDolinin;
 				TargetAttributes = {
 					4D46F72A277E010200DE0A00 = {
@@ -349,6 +361,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8C392705BB2363C20CE64526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-slap/Pods-slap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A36CEEAD0A76F419B01471ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +421,7 @@
 				4D47E0F3277E0A7900DBE39E /* StartView.swift in Sources */,
 				4D47E0FA277E0A7900DBE39E /* SettingApp.swift in Sources */,
 				4D47E0FB277E0A7900DBE39E /* Sound.swift in Sources */,
+				911599D3278D9E260069A1EF /* FullScreenGoogleAds.swift in Sources */,
 				4D47E0D7277E0A5D00DBE39E /* MenuGameViewController.swift in Sources */,
 				4D47E0D5277E0A5D00DBE39E /* FullVersionViewController.swift in Sources */,
 				4D46F72F277E010200DE0A00 /* AppDelegate.swift in Sources */,
@@ -446,6 +476,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -506,6 +537,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -541,7 +573,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = slap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +594,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = slap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
