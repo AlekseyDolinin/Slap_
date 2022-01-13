@@ -12,7 +12,7 @@ extension FinalViewController {
         #if DEBUG
         let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         #else
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8093774413708674/2599327773")
         #endif
         
         interstitial.delegate = self
